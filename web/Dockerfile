@@ -51,6 +51,6 @@ RUN echo "myuser:mypass" | chpasswd
 RUN echo "root:rootpass" | chpasswd
 
 # 8. 起動コマンドの指定
-#COPY startup.sh /startup.sh
-#RUN chmod 744 /startup.sh
+COPY startup.sh /startup.sh
+RUN chmod 744 /startup.sh
 CMD /startup.sh
